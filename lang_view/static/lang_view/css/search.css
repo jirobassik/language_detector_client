@@ -1,0 +1,283 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+/*.search-container {*/
+/*    background-color: #333;*/
+/*    color: white;*/
+/*    text-align: center;*/
+/*    padding: 20px;*/
+/*}*/
+
+/*.search-input {*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    margin-top: 20px;*/
+/*}*/
+
+.search-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 999;
+}
+
+.search-container .search-input {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.search-input {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    width: 100%;
+
+
+}
+
+.search-container .search-input input[type="text"] {
+    width: 600px;
+    margin-left: 25px;
+}
+
+
+/* Дополнительные стили для примера */
+/* Установите нужную высоту контента, чтобы проверить скроллинг */
+
+
+.content {
+    padding-top: 60px; /* Учитывайте высоту строки поиска */
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    border: none;
+    border-radius: 5px;
+}
+
+button#search-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.file-upload {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.custom-file-upload {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.file-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.file-card {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    padding: 15px;
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+.file-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.file-link {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    margin-top: 5px;
+    font-size: 13px;
+}
+
+.two_but {
+    position: relative;
+    text-align: center;
+    top: 465px;
+}
+
+.custom-file-upload {
+    color: black;
+    background-color: grey;
+    border-radius: 12px;
+    font-size: 20px;
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.custom-file-upload:hover {
+    background-color: grey; /* black */
+    color: white;
+}
+
+.accept_upl {
+    color: black;
+    background-color: grey;
+    border-radius: 12px;
+    font-size: 20px;
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.accept_upl:hover {
+    background-color: grey; /* black */
+    color: white;
+}
+
+
+input[type="file"] {
+    display: none;
+}
+
+
+#save_csv {
+    position: relative;
+    color: black;
+    background-color: white;
+    border-radius: 12px;
+    font-size: 15px;
+    border: 2px solid black;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+#save_csv:hover {
+    background-color: black; /* black */
+    color: white;
+}
+
+a.home-button {
+    text-decoration: none;
+    color: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.search-container {
+    position: relative;
+}
+
+.bi-archive {
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    font-size: 30px;
+    color: white;
+}
+
+.bi-question-circle {
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    font-size: 30px;
+    color: white;
+}
+
+.bi-house {
+    position: absolute;
+    top: 10px;
+    left: 2px;
+    font-size: 30px;
+    color: white;
+}
+
+.bi-calculator {
+    position: absolute;
+    top: 10px;
+    right: 90px;
+    font-size: 30px;
+    color: white;
+}
+
+.bi-body-text {
+    font-size: 20px;
+}
+
+.bi-file-word {
+    font-size: 20px;
+}
+
+.bi-robot {
+    font-size: 20px;
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.button-container a {
+    flex: 0 0 auto;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+
+.home-button-container {
+    position: absolute;
+    top: -5px;
+    right: 10px;
+    margin: 10px;
+}
+
+.download-button-container {
+    display: inline-block;
+}
+
+.print-button {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.bi-download{
+    font-size: 25px;
+}
+
+.bi-printer{
+    font-size: 25px;
+}
+
+.bi-archive {
+    color: black;
+}
+
+.bi-question-circle {
+    color: black;
+}

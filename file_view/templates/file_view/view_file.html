@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% load custom_tag %}
+{% block style %}{% static 'file_view/css/search.css' %}{% endblock %}
+
+{% block content_main %}
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="file-upload">
+            <label class="custom-file-upload">
+                <input type="file" name="document" accept=".pdf">
+                Выбрать файл
+            </label>
+            <button class="accept_upl" type="submit" name="upl">Загрузить файл</button>
+        </div>
+    </form>
+    <div class="home-button-container">
+        <a href="{% url 'view_all_data' %}">
+            <i class="bi bi-house"></i>
+        </a>
+    </div>
+    <div class="file-cards">
+        {% if files %}
+            {% for file in files %}
+                <div class="file-card">
+                    <h3>{% get_filename file.upload_file %}</h3>
+                    <a href="{% url 'file-delete' file.id %}" class="btn btn-outline-danger"><i
+                            class="bi bi-trash2-fill"></i></a>
+                    <a href="{% url 'file-download' file.id %}" class="btn btn-outline-danger"><i
+                            class="bi bi-download"></i></a>
+                </div>
+            {% endfor %}
+        {% else %}
+            <h2>Нет данных</h2>
+        {% endif %}
+    </div>
+{% endblock %}

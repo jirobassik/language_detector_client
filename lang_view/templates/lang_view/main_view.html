@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% load custom_tag %}
+{% block style %}{% static 'lang_view/css/search.css' %}{% endblock %}
+
+{% block content_main %}
+    <div class="home-button-container">
+        <a href="{% url 'file_view' %}">
+            <i class="bi bi-archive"></i>
+        </a>
+        <a href="{% url 'help' %}">
+            <i class="bi bi-question-circle"></i>
+        </a>
+    </div>
+    <div class="file-cards">
+        {% if files %}
+            {% for file in files %}
+                <div class="file-card">
+                    {% get_filename file.upload_file as filename %}
+                    <h3><a href="{% url 'file-download' file.id %}">{{ filename }}</a></h3>
+                    {{ file.file_content|truncatewords:20 }}
+                    <div class="button-container">
+                        <a href="{% url 'alphabet_method' file.id %}"><i class="bi bi-body-text"></i></a>
+                        <a href="{% url 'short_method' file.id %}"><i class="bi bi-file-word"></i></a>
+                        <a href="{% url 'neuro_method' file.id %}"><i class="bi bi-robot"></i></a>
+                    </div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <h2>Нет данных</h2>
+        {% endif %}
+    </div>
+{% endblock %}
