@@ -1,5 +1,6 @@
 class LanguageDetectorModel:
-    def __init__(self, text_language, filename, file_id):
+    def __init__(self, text_language, filename, file_id, language_percent):
+        self.language_percent = language_percent
         self.file_id = file_id
         self.filename = filename
         self.text_language = text_language

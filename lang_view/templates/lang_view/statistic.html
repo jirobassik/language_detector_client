@@ -8,15 +8,20 @@
             <h5>Определенный язык файла: {{ language.text_language }}</h5>
             <h5>Значение принадлежности к языку: {{ language.language_percent }}</h5>
             <h5>Метод определения языка: {{ method }}</h5>
+            <h6>Статистика по всем файлам:</h6>
+            <ul>
+                <li>Время затраченное на алфавитный метод: {{ statistic.alphabet_time }}</li>
+                <li>Время затраченное на метод коротких слов: {{ statistic.short_time }}</li>
+                <li>Время затраченное на нейросетевой метод: {{ statistic.neuro_time }}</li>
+                <li>Процент русского языка: {{ statistic.russian_percent }}</li>
+                <li>Процент английского языка: {{ statistic.english_percent }}</li>
+            </ul>
             <div class="download-button-container">
                 <a href="{% url 'file-download-json' %}" class="print-button">
                     <i class="bi bi-download"></i>
                 </a>
                 <a onclick="handlePrint()" class="print-button">
                     <i class="bi bi-printer"></i>
-                </a>
-                <a href="{% url url language.file_id %}" class="print-button">
-                    <i class="bi bi-bar-chart-fill"></i>
                 </a>
             </div>
         </div>

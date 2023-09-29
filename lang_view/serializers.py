@@ -3,6 +3,7 @@ from rest_framework import serializers
 
 class LanguageSerializer(serializers.Serializer):
     text_language = serializers.CharField()
+    language_percent = serializers.FloatField()
     filename = serializers.CharField()
     file_id = serializers.IntegerField()
 

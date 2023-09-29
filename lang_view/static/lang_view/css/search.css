@@ -257,20 +257,21 @@ a {
     margin: 10px;
 }
 
-.download-button-container {
+.download-button-container a {
     display: inline-block;
+    margin-right: 10px;
 }
 
 .print-button {
-  display: block;
-  margin-bottom: 10px;
+    display: block;
+    margin-bottom: 10px;
 }
 
-.bi-download{
+.bi-download {
     font-size: 25px;
 }
 
-.bi-printer{
+.bi-printer {
     font-size: 25px;
 }
 
@@ -279,5 +280,9 @@ a {
 }
 
 .bi-question-circle {
+    color: black;
+}
+
+.bi-bar-chart-fill {
     color: black;
 }

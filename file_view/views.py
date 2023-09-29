@@ -1,6 +1,3 @@
-import mimetypes
-import os
-
 from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render
 from django.urls import reverse
