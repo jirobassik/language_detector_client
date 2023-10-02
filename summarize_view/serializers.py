@@ -14,3 +14,8 @@ class StatisticSerializer(serializers.Serializer):
     neuro_time = serializers.CharField()
     english_percent = serializers.IntegerField()
     russian_percent = serializers.IntegerField()
+
+class SummarizeSerializer(serializers.Serializer):
+    sum_text = serializers.CharField()
+    filename = serializers.CharField()
+    file_id = serializers.IntegerField()

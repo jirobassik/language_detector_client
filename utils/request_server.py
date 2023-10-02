@@ -6,20 +6,8 @@ class Request:
         self.__model_name = model_name
 
     @classmethod
-    def alphabet_model(cls):
-        return cls('alphabet')
-
-    @classmethod
-    def neuro_model(cls):
-        return cls('neuro')
-
-    @classmethod
-    def statistic_model(cls):
-        return cls('files_statistic')
-
-    @classmethod
-    def short_model(cls):
-        return cls('short')
+    def summarize_model(cls):
+        return cls('summarize')
 
     @classmethod
     def uploadfiles_model(cls):

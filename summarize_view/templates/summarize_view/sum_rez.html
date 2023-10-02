@@ -1,22 +1,17 @@
 {% extends 'layout.html' %}
 {% load static %}
-{% block style %}{% static 'lang_view/css/search.css' %}{% endblock %}
+{% block style %}{% static 'summarize_view/css/search.css' %}{% endblock %}
 {% block content_main %}
     <div class="file-cards">
         <div class="file-card">
-            <h3>Название файла: <a href="{% url 'file-download' language.file_id %}">{{ language.filename }}</a></h3>
-            <h5>Определенный язык файла: {{ language.text_language }}</h5>
-            <h5>Значение принадлежности к языку: {{ language.language_percent }}</h5>
-            <h5>Метод определения языка: {{ method }}</h5>
+            <h3>Название файла: <a href="{% url 'file-download' sum_text.file_id %}">{{ sum_text.filename }}</a></h3>
+            <h5>Реферированный текст: {{ sum_text.sum_text }}</h5>
             <div class="download-button-container">
                 <a href="{% url 'file-download-json' %}" class="print-button">
                     <i class="bi bi-download"></i>
                 </a>
                 <a onclick="handlePrint()" class="print-button">
                     <i class="bi bi-printer"></i>
-                </a>
-                <a href="{% url url language.file_id %}" class="print-button">
-                    <i class="bi bi-bar-chart-fill"></i>
                 </a>
             </div>
         </div>
