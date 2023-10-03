@@ -10,6 +10,10 @@ class Request:
         return cls('summarize')
 
     @classmethod
+    def standart_summarize_model(cls):
+        return cls('standart_summarize')
+
+    @classmethod
     def uploadfiles_model(cls):
         return cls('uploadfiles')
 

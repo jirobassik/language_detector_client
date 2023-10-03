@@ -1,21 +1,8 @@
 from rest_framework import serializers
 
-
-class LanguageSerializer(serializers.Serializer):
-    text_language = serializers.CharField()
-    language_percent = serializers.FloatField()
-    filename = serializers.CharField()
-    file_id = serializers.IntegerField()
-
-
-class StatisticSerializer(serializers.Serializer):
-    alphabet_time = serializers.CharField()
-    short_time = serializers.CharField()
-    neuro_time = serializers.CharField()
-    english_percent = serializers.IntegerField()
-    russian_percent = serializers.IntegerField()
-
 class SummarizeSerializer(serializers.Serializer):
     sum_text = serializers.CharField()
+    sum_text_standart = serializers.CharField()
+    key_words = serializers.CharField()
     filename = serializers.CharField()
     file_id = serializers.IntegerField()

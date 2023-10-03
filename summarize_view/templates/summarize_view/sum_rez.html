@@ -5,7 +5,9 @@
     <div class="file-cards">
         <div class="file-card">
             <h3>Название файла: <a href="{% url 'file-download' sum_text.file_id %}">{{ sum_text.filename }}</a></h3>
-            <h5>Реферированный текст: {{ sum_text.sum_text }}</h5>
+            <h5>Реферированный текст (ключевые слова): {{ sum_text.key_words }}</h5>
+            <h5>Реферированный текст (классическое): {{ sum_text.sum_text_standart }}</h5>
+            <h5>Реферированный текст (машинное обучение): {{ sum_text.sum_text }}</h5>
             <div class="download-button-container">
                 <a href="{% url 'file-download-json' %}" class="print-button">
                     <i class="bi bi-download"></i>
@@ -22,7 +24,11 @@
             for (var i = 0; i < printButtons.length; i++) {
                 printButtons[i].style.display = 'none';
             }
+            var style = document.createElement('style');
+            style.innerHTML = '@media print { body { width: 150%; } }';
+            document.head.appendChild(style);
             window.print();
+            document.head.removeChild(style);
             for (var i = 0; i < printButtons.length; i++) {
                 printButtons[i].style.display = 'inline-block';
             }
